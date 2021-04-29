@@ -1,4 +1,4 @@
-import { ModelCardContainer, ApiCard } from '../Components'
+import { ModelCardContainer, ApiCardContainer } from '../Components'
 import { makeStyles } from '@material-ui/core/styles'
 import { TextField, Button } from '@material-ui/core'
 import './pages.scss'
@@ -33,6 +33,40 @@ const AddDoc = () => {
     ]
 
 
+    const apiContent = [
+        {
+            id:0,
+            modelName: 'MODEL NAME 1',
+            apiCalls: [
+                {id:0, httpType:'GET', link:'/user', info:'To get list of Users', reqHeader:'HEADER', reqVal:'Authorization', resBody:'{id:ObjId(12324),username:tanisha}', darkColor:'#618CDB', lightColor:'#7FA7F1'},
+                {id:1, httpType:'POST', link:'/user', info:'To add a new User', reqHeader:'URL PARAMS', reqVal:':id >> id of the user', resBody:'{id:ObjId(12324),username:tanisha}', darkColor:'#3CC299', lightColor:'#6DE0BD'},
+                {id:2, httpType:'PUT', link:'/user/:id', info:'To get list of Users', reqHeader:'FILES', reqVal:'True', resBody:'{id:ObjId(12324),username:tanisha}', darkColor:'#C67535', lightColor:'#EDA063'},
+                {id:3, httpType:'DELETE', link:'/user/:id', info:'To get list of Users', reqHeader:'URL QUERY', reqVal:'school=CPS/DPS', resBody:'{id:ObjId(12324),username:tanisha}', darkColor:'#B6334C', lightColor:'#E85B76'}
+            ]
+        },
+        {
+            id:1,
+            modelName: 'MODEL NAME 2',
+            apiCalls: [
+                {id:0, httpType:'GET', link:'/user', info:'To get list of Users', reqHeader:'HEADER', reqVal:'Authorization', resBody:'{id:ObjId(12324),username:tanisha}', darkColor:'#618CDB', lightColor:'#7FA7F1'},
+                {id:1, httpType:'POST', link:'/user', info:'To add a new User', reqHeader:'URL PARAMS', reqVal:':id >> id of the user', resBody:'{id:ObjId(12324),username:tanisha}', darkColor:'#3CC299', lightColor:'#6DE0BD'},
+                {id:2, httpType:'PUT', link:'/user/:id', info:'To get list of Users', reqHeader:'FILES', reqVal:'True', resBody:'{id:ObjId(12324),username:tanisha}', darkColor:'#C67535', lightColor:'#EDA063'},
+                {id:3, httpType:'DELETE', link:'/user/:id', info:'To get list of Users', reqHeader:'URL QUERY', reqVal:'school=CPS/DPS', resBody:'{id:ObjId(12324),username:tanisha}', darkColor:'#B6334C', lightColor:'#E85B76'}
+            ]
+        },
+        {
+            id:2,
+            modelName: 'MODEL NAME 3',
+            apiCalls: [
+                {id:0, httpType:'GET', link:'/user', info:'To get list of Users', reqHeader:'HEADER', reqVal:'Authorization', resBody:'{id:ObjId(12324),username:tanisha}', darkColor:'#618CDB', lightColor:'#7FA7F1'},
+                {id:1, httpType:'POST', link:'/user', info:'To add a new User', reqHeader:'URL PARAMS', reqVal:':id >> id of the user', resBody:'{id:ObjId(12324),username:tanisha}', darkColor:'#3CC299', lightColor:'#6DE0BD'},
+                {id:2, httpType:'PUT', link:'/user/:id', info:'To get list of Users', reqHeader:'FILES', reqVal:'True', resBody:'{id:ObjId(12324),username:tanisha}', darkColor:'#C67535', lightColor:'#EDA063'},
+                {id:3, httpType:'DELETE', link:'/user/:id', info:'To get list of Users', reqHeader:'URL QUERY', reqVal:'school=CPS/DPS', resBody:'{id:ObjId(12324),username:tanisha}', darkColor:'#B6334C', lightColor:'#E85B76'}
+            ]
+        }
+    ]
+
+
     return (
         <div className='container' style={{marginTop:'3rem'}}>
             <form noValidate autoComplete="off">
@@ -45,8 +79,8 @@ const AddDoc = () => {
 
                 <h1 className='header'>APIs</h1>
                 <Button variant="outlined" className={classes.addbutton}>ADD API</Button>
-                <ApiCard />
-                
+                {apiContent.map(({id,modelName,apiCalls}) => <ApiCardContainer key={id} modelName={modelName} apiCalls={apiCalls} />)}
+                <Button variant="outlined" className={classes.addbutton}>ADD DOCUMENT</Button>
             </form>
         </div>
     )

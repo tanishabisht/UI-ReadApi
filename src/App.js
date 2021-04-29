@@ -1,6 +1,6 @@
 import {HashRouter, Switch, Route, Redirect} from 'react-router-dom';
 import {Navbar, Footer} from './Components'
-import { AllDocs, AddDoc } from './Pages'
+import { AllDocs, AddDoc, CreateModel, CreateAPI } from './Pages'
 import './App.css'
 
 function App() {
@@ -12,6 +12,8 @@ function App() {
           <Redirect from='/' to='/alldocs' exact/>
           <Route exact path='/alldocs' component={AllDocs} />
           <Route exact path='/adddocs' component={AddDoc} />
+          <Route exact path='/create_model' component={CreateModel} />
+          <Route exact path='/create_api' component={CreateAPI} />
         </Switch>
         <Footer/>
       </div>

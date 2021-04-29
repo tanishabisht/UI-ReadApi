@@ -1,8 +1,7 @@
-import './cards.scss'
 import { makeStyles } from '@material-ui/core/styles'
-import {Accordion, AccordionSummary, AccordionDetails, Typography} from '@material-ui/core';
+import {Accordion, AccordionSummary, AccordionDetails} from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import purple from '@material-ui/core/colors/purple'
+import './cards.scss'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -10,34 +9,34 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
     },
     heading: {
-        marginBottom: theme.spacing(1),
         backgroundColor: '#7FA7F1',
-        color: '#fff'
+        color: '#fff',
+        margin: theme.spacing(1)
     }
 }))
 
 
 
-const ApiCard = () => {
+const ApiCard = ({id, httpType, link, info, reqHeader, reqVal, resBody, darkColor, lightColor}) => {
 
     const classes = useStyles()
 
     return (
         <div className={classes.root}>
 
-          <Accordion className={classes.heading}>
+          <Accordion className={classes.heading} style={{backgroundColor:`${lightColor}`}}>
             <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header" >
                 <div className='api_header'>
-                    <span style={{backgroundColor:'#618CDB'}} className='httpTypeColor'>GET</span>
-                    <span>/user</span>
-                    <span>To get list of Users</span>
+                    <span style={{backgroundColor:`${darkColor}`}} className='httpTypeColor'>{httpType}</span>
+                    <span>{link}</span>
+                    <span>{info}</span>
                 </div>
             </AccordionSummary>
             <AccordionDetails>
                 <div className='api_body'>
-                    <span>HEADERS</span>
-                    <span><span style={{backgroundColor:'#618CDB'}} className='reqVal'>Authorizarion</span></span>
-                    <span className='resBody'> [siids, sdjsjdsk, sdsldjk] asdsdw, kuwadhi asdsdw, kuwadhiadwedqw </span>
+                    <span>{reqHeader}</span>
+                    <span><span style={{backgroundColor:`${darkColor}`}} className='reqVal'>{reqVal}</span></span>
+                    <span className='resBody'>{resBody}</span>
                 </div>
             </AccordionDetails>
           </Accordion>

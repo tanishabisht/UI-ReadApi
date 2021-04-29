@@ -4,8 +4,105 @@
     margin: 2rem;
     border-radius: 0.4rem;
     color: #fff;
+}
 
-    .linkIcon{
-        height: 2rem;
+
+
+
+
+.crudIcon{
+    height: 2rem;
+    margin-left: 0.5rem;
+}
+
+
+
+
+
+.modelcard_container {
+    background-color: #9b81f1;
+    padding: 2rem 5rem;
+    border-radius: 0.4rem;
+    color: #fff;
+    margin-bottom: 1rem;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+    .heading {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td, th {
+        text-align: left;
+        padding: 0.2rem;
+    }
+
+}
+
+
+
+
+
+.gray_container {
+    background-color: #ccc;
+    padding: 2rem;
+    border-radius: 0.4rem;
+}
+
+
+
+
+
+
+
+.api_header {    
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    & span{
+        padding: 5px;
+        font-weight: 600;
+    }
+
+    & span:last-child{
+        font-weight: 400;
+    }
+
+    .httpTypeColor {        
+        padding: 5px 10px;
+        border-radius: 0.3rem;
+    }
+}
+
+
+
+.api_body {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.9rem;
+
+    & span{
+        padding: 3px 5px;
+    }
+
+    .reqVal{
+        padding: 3px 5px;
+        border-radius: 0.3rem;
+    }
+    .resBody{
+        background-color: #4C5051;
+        padding: 10px;
+        border-radius: 0.3rem;
+        width: 30%;
     }
 }

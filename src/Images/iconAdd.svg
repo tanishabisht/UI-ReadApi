@@ -1,0 +1,8 @@
+<svg id="ADD" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g id="Rectangle_14" data-name="Rectangle 14" fill="#fff" stroke="#9b81f1" stroke-linecap="round" stroke-width="5">
+    <rect width="48" height="48" rx="10" stroke="none"/>
+    <rect x="2.5" y="2.5" width="43" height="43" rx="7.5" fill="none"/>
+  </g>
+  <path id="Path_4" data-name="Path 4" d="M0,0V22.572" transform="translate(24 13.631)" fill="none" stroke="#9b81f1" stroke-linecap="round" stroke-width="5"/>
+  <line id="Line_2" data-name="Line 2" x2="21" transform="translate(13.5 25.5)" fill="none" stroke="#9b81f1" stroke-linecap="round" stroke-width="5"/>
+</svg>

@@ -1,0 +1,22 @@
+.nav_logo{
+    color: #fff !important;
+    background-color: #9b81f1;
+    padding: 5px 15px;
+}
+
+.secLink {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #9b81f1;
+    padding: 5px 10px;
+    &:hover{
+        cursor: pointer;
+        text-decoration: none;
+        color: #aaa;
+    }
+    &.secLinkActive{
+        background-color: #9b81f1;
+        color: #fff;
+        padding: 5px 10px;
+    }
+}

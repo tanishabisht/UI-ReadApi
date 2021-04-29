@@ -1,3 +1,8 @@
 .App {
   text-align: center;
+  background: url(./Images/bgLeft.png) no-repeat center center fixed;
+  background-size: cover;
+  background-position: top left;
+  min-height: 100vh;
+  max-height: 100%;
 }

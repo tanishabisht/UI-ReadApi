@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { TextField, Button, FormControl, InputLabel, Select, MenuItem } from '@material-ui/core'
+import {NavLink} from 'react-router-dom'
 import './pages.scss'
 
 
@@ -44,7 +45,9 @@ const CreateAPI = () => {
 
             <TextField className={classes.textfield} id="reqVal" label="Field Generated based on Request Field ..." variant="outlined" multiline />
             <TextField className={classes.textfield} id="reqBody" label="Response Body ..." variant="outlined" multiline />
-            <Button variant="contained" color="primary" className={classes.addbutton} >ADD API</Button>            
+            <NavLink to="/adddocs">
+                <Button variant="contained" color="primary" className={classes.addbutton} >ADD API</Button>  
+            </NavLink>          
         </div>
     )
 }

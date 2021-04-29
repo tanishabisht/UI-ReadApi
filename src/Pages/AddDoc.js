@@ -1,6 +1,7 @@
 import { ModelCardContainer, ApiCardContainer } from '../Components'
 import { makeStyles } from '@material-ui/core/styles'
 import { TextField, Button } from '@material-ui/core'
+import {NavLink} from 'react-router-dom'
 import './pages.scss'
 
 const useStyles = makeStyles(theme => ({
@@ -74,13 +75,13 @@ const AddDoc = () => {
                 <TextField className={classes.textfield} id="project-desc" label="Project Description ..." variant="outlined" multiline />
                 
                 <h1 className='header'>MODELS</h1>
-                <Button variant="outlined" className={classes.addbutton}>ADD MODELS</Button>
+                <NavLink to="/create_model"><Button variant="outlined" className={classes.addbutton}>ADD MODELS</Button></NavLink>
                 <ModelCardContainer content={modelContent} />
 
                 <h1 className='header'>APIs</h1>
-                <Button variant="outlined" className={classes.addbutton}>ADD API</Button>
+                <NavLink to="/create_api"><Button variant="outlined" className={classes.addbutton}>ADD API</Button></NavLink>
                 {apiContent.map(({id,modelName,apiCalls}) => <ApiCardContainer key={id} modelName={modelName} apiCalls={apiCalls} />)}
-                <Button variant="outlined" className={classes.addbutton}>ADD DOCUMENT</Button>
+                <NavLink to="/alldocs"><Button variant="outlined" className={classes.addbutton}>ADD DOCUMENT</Button></NavLink>                
             </form>
         </div>
     )

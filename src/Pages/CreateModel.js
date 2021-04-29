@@ -1,8 +1,9 @@
 import {useState} from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { TextField, Button, FormControl, InputLabel, Select, MenuItem } from '@material-ui/core'
+import { TextField, Button } from '@material-ui/core'
 import AddIcon from '../Images/iconAdd.svg'
 import DelIcon from '../Images/iconDelete.svg'
+import {NavLink} from 'react-router-dom'
 import './pages.scss'
 
 
@@ -10,7 +11,8 @@ import './pages.scss'
 const useStyles = makeStyles(theme => ({
     textfield: {
         width:'100%',
-        marginBottom: theme.spacing(2)
+        marginBottom: theme.spacing(2),
+        marginLeft: theme.spacing(2)
     },
     addbutton: {
         marginTop: theme.spacing(3)
@@ -23,30 +25,53 @@ const CreateModel = () => {
 
     const classes = useStyles()
 
-    const [reqField, setReqField] = useState('')
-    const handleReqFieldChange = e => setReqField(e.target.value)
+
+
+
+    var initialSchemaVal = { name:'', type:'', dummyExample:''}
+
+    const [schemaArr, setSchemaArr] = useState([initialSchemaVal])
+
+    const addSchemaField = () => {
+        const schemaArrVar = [...schemaArr]
+        schemaArrVar.push(initialSchemaVal)
+        setSchemaArr(schemaArrVar)
+    }
+
+    var delSchemaField = fid => {
+        const schemaArrVar = [...schemaArr]
+        schemaArrVar.splice(fid, 1)
+        setSchemaArr(schemaArrVar)
+    }
+
+
+
 
     return (
-        <div className='container' style={{marginTop:'3rem', height:'75vh'}}>
+        <div className='container createmodel_container'>
             <h1 className='formHeader'>Create Model</h1>
             <TextField className={classes.textfield} id="http-type" label="Model Name ..." variant="outlined" />
-            <h2 className='formHeader'>Schema<img className='crudIcon' src={AddIcon} alt='add icon' /></h2>
+            
+            <h2 className='formHeader'>
+                Schema
+                <img onClick={addSchemaField} className='crudIcon' src={AddIcon} alt='add icon'/>
+            </h2>
+            
+            {schemaArr.map((schema, fid) => {
+                return (
+                    <div className='d-flex justify-content-between' key={fid}>
+                        <TextField className={classes.textfield} id="schemaName" label="Schema Name ..." variant="outlined" />
+                        <TextField className={classes.textfield} id="schemaType" label="Schema Type ..." variant="outlined" />
+                        <TextField className={classes.textfield} id="dummyExample" label="Schema Dummy Example ..." variant="outlined" />
+                        <img onClick={() => delSchemaField(fid)} className='crudIcon' src={DelIcon} alt='delete icon'/>
+                    </div>
+                )
+            })}
 
-            <FormControl variant="outlined" className={classes.textfield}>
-                <InputLabel id="reqField">Request Field ...</InputLabel>
-                <Select labelId="reqField" label='Request Field ...' // id="reqField"
-                    value={reqField} onChange={handleReqFieldChange} >
-                    <MenuItem value={'files'}>Files</MenuItem>
-                    <MenuItem value={'params'}>Params</MenuItem>
-                    <MenuItem value={'queries'}>Queries</MenuItem>
-                    <MenuItem value={'header'}>Header</MenuItem>
-                    <MenuItem value={'body'}>Body</MenuItem>
-                </Select>
-            </FormControl>
-
-            <TextField className={classes.textfield} id="reqVal" label="Field Generated based on Request Field ..." variant="outlined" multiline />
-            <TextField className={classes.textfield} id="reqBody" label="Response Body ..." variant="outlined" multiline />
-            <Button variant="contained" color="primary" className={classes.addbutton} >ADD API</Button>            
+            <NavLink to="/adddocs">
+                <Button variant="contained" color="primary" className={classes.addbutton}>ADD MODEL</Button>  
+            </NavLink>
+                      
         </div>
     )
 }

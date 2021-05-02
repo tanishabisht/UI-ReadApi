@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/ReadAPI/static/css/main.f8bf00e1.chunk.css",
+    "main.js": "/ReadAPI/static/js/main.db2c67de.chunk.js",
+    "main.js.map": "/ReadAPI/static/js/main.db2c67de.chunk.js.map",
+    "runtime-main.js": "/ReadAPI/static/js/runtime-main.788e658a.js",
+    "runtime-main.js.map": "/ReadAPI/static/js/runtime-main.788e658a.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/ReadAPI/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.fd086ea5.chunk.js": "/ReadAPI/static/js/2.fd086ea5.chunk.js",
+    "static/js/2.fd086ea5.chunk.js.map": "/ReadAPI/static/js/2.fd086ea5.chunk.js.map",
+    "index.html": "/ReadAPI/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/ReadAPI/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.f8bf00e1.chunk.css.map": "/ReadAPI/static/css/main.f8bf00e1.chunk.css.map",
+    "static/js/2.fd086ea5.chunk.js.LICENSE.txt": "/ReadAPI/static/js/2.fd086ea5.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/ReadAPI/static/media/bgLeft.8b65fe24.png",
+    "static/media/iconAdd.5e1a98d6.svg": "/ReadAPI/static/media/iconAdd.5e1a98d6.svg",
+    "static/media/iconDelete.6e366819.svg": "/ReadAPI/static/media/iconDelete.6e366819.svg",
+    "static/media/iconEdit.10f62b7c.svg": "/ReadAPI/static/media/iconEdit.10f62b7c.svg",
+    "static/media/iconLink.2f98e9cf.svg": "/ReadAPI/static/media/iconLink.2f98e9cf.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.788e658a.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.fd086ea5.chunk.js",
+    "static/css/main.f8bf00e1.chunk.css",
+    "static/js/main.db2c67de.chunk.js"
+  ]
+}

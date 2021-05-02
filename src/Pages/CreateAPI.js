@@ -28,12 +28,24 @@ const CreateAPI = () => {
     return (
         <div className='container' style={{marginTop:'3rem', height:'75vh'}}>
             <h1 className='formHeader'>Create API</h1>
-            <TextField className={classes.textfield} id="http-type" label="HTTP Type ..." variant="outlined" />
+            
+            <FormControl variant="outlined" className={classes.textfield}>
+                <InputLabel id="http-type">HTTP Type ...</InputLabel>
+                <Select labelId="http-type" label='HTTP Type ...' 
+                    value={reqField} onChange={handleReqFieldChange} >
+                    <MenuItem value={'get'}>GET</MenuItem>
+                    <MenuItem value={'post'}>POST</MenuItem>
+                    <MenuItem value={'put'}>PUT</MenuItem>
+                    <MenuItem value={'patch'}>PATCH</MenuItem>
+                    <MenuItem value={'delete'}>DELETE</MenuItem>
+                </Select>
+            </FormControl>
+
             <TextField className={classes.textfield} id="link" label="Link ..." variant="outlined" />
 
             <FormControl variant="outlined" className={classes.textfield}>
-                <InputLabel id="reqField">Request Field ...</InputLabel>
-                <Select labelId="reqField" label='Request Field ...' // id="reqField"
+                <InputLabel id="reqField">Request Type ...</InputLabel>
+                <Select labelId="reqField" label='Request Type ...' // id="reqField"
                     value={reqField} onChange={handleReqFieldChange} >
                     <MenuItem value={'files'}>Files</MenuItem>
                     <MenuItem value={'params'}>Params</MenuItem>
@@ -43,7 +55,7 @@ const CreateAPI = () => {
                 </Select>
             </FormControl>
 
-            <TextField className={classes.textfield} id="reqVal" label="Field Generated based on Request Field ..." variant="outlined" multiline />
+            <TextField className={classes.textfield} id="reqVal" label="Request Value ..." variant="outlined" multiline />
             <TextField className={classes.textfield} id="reqBody" label="Response Body ..." variant="outlined" multiline />
             <NavLink to="/adddocs">
                 <Button variant="contained" color="primary" className={classes.addbutton} >ADD API</Button>  

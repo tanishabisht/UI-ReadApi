@@ -8,7 +8,7 @@ const ModelCard = ({modelName, schemaArr}) => {
         <div className='modelcard_container'>
 
             <div className='heading'>
-                <h2>{modelName}</h2>
+                <h2 style={{color:'#fff'}}>{modelName}</h2>
                 <span>
                     <a href='#'><img className='crudIcon' src={EditIcon} alt='edit link' /></a>
                     <a href='#'><img className='crudIcon' src={DeleteIcon} alt='delete link' /></a>

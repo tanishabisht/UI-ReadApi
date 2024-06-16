@@ -1,42 +1,31 @@
-# ReadAPI | Team Atom
+# UI - ReadAPI 
 
-Its live - [Demo](https://tanishabisht.github.io/ReadAPI/)
+**Problem Statement**: When working in a team, documenting an API is crucial for faster development and smooth collaboration between front-end and back-end developers. Good documentation provides a clear picture of implementation and helps visualize models and schemas.
 
-## Problem Statements
+**Proposed Solution** is ReadAPI: A tool for documenting APIs.
 
-When working in a team, documenting an API is really important so that deveopment becomes faster and work is streamlined between front-end and bac-end devs. It helps to get an overall picture of how it is going to be implemented. This gives some structure to visualise the models and schemas.
 
-## Proposed Solutions
+## Demo
+![Demo not found](/demo.gif)
 
-A tool for documenting APIs - `ReadAPI`
 
-## Features added
+## Features
+- List all the created documentation of APIs
+- Add new models with model name, schema name, schema type, and an example
+- Add new APIs for the respective models: server response, client request, HTTP type
 
-- listing all the documentation created
-- Add new documentation
-  - Add new models
-    - Add modelName, schema name, schema type, and an example
-  - Add new APIs for the respective models
-    - Response from the server
-    - Request from client
-    - HTTP type
 
-## Future Aspects
+## Instructions to run the application
+- Clone the repo: `git clone git@github.com:tanishabisht/UI-ReadApi.git`
+- Go to the correct directory: `cd UI-ReadApi`
+- Use the node version: `v16.20.2`
+- Install all dependancies: `npm install` 
+- Run the application: `npm start`
 
-Getting more features such as :
 
-- enabling user authentication
-- adding on to back-end boilerplate
-- to be decided...
+## Technologies used
+`react` `express` `nodejs` `mongodb` `adobexd`
 
-## Tech Stack Used
-
-- MongoDB
-- React
-- Express
-- NodeJS
-- AdobeXD for UI design
 
 ## Collaborators
-
 [`Tanisha`](https://github.com/tanishabisht) [`Jayvardhan`](https://github.com/ComputerScientist-01)
